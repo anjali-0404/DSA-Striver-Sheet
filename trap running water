@@ -1,0 +1,25 @@
+class Solution {
+  public:
+    int maxWater(vector<int>& arr) {
+    int left = 0, right = arr.size() - 1;  // two pointers
+    int leftMax = 0, rightMax = 0;        // max heights
+    int water = 0;                        // total water
+
+    while (left <= right) {               // traverse array
+        if (arr[left] <= arr[right]) {    // process smaller side
+            if (arr[left] >= leftMax)
+                leftMax = arr[left];      // update left max
+            else
+                water += leftMax - arr[left]; // add trapped water
+            left++;                       // move left pointer
+        } else {
+            if (arr[right] >= rightMax)
+                rightMax = arr[right];    // update right max
+            else
+                water += rightMax - arr[right]; // add trapped water
+            right--;                      // move right pointer
+        }
+    }
+    return water;                         // return result
+}
+};
