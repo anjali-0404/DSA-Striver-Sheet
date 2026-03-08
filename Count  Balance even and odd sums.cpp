@@ -7,8 +7,8 @@ public:
         int oddSum = 0, evenSum = 0;
         for (int i = 0; i < n; i++)
         {
-            if (i % 2 != 0)
-                oddSum += arr[i];
+            if (i % 2 != 0){
+                oddSum += arr[i];}
             else
                 evenSum += arr[i];
         }
@@ -30,3 +30,4 @@ public:
         return ans;
     }
 };
+
