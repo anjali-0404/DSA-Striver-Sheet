@@ -1,5 +1,4 @@
-class Solution
-{
+class Solution{
 public:
     int cntWays(vector<int> &arr)
     {
@@ -30,4 +29,5 @@ public:
         return ans;
     }
 };
+
 
