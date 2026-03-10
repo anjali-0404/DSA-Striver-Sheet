@@ -3,7 +3,6 @@ public:
     vector<int> getFloorAndCeil(vector<int> nums, int x) {
         int start = 0, end = nums.size() - 1;
         int floor=-1, ceil=-1;
-
         while (start <= end) {
             int mid = (start + end) / 2;
 
